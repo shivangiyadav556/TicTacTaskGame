@@ -82,6 +82,30 @@ private static void computerTurn(char[][] board) {
 		System.out.println("\nComputer chose " + computerMoveX + ","+ computerMoveY);
 		placeMove(board, Integer.toString(computerMoveX)+","+Integer.toString(computerMoveY), 'O');
 	}
+private static boolean isValidMove (char[][] board, String position) {
+		switch(position) {
+			case "0,0":
+				return (board[0][0] == ' ');
+			case "0,1":
+				return (board[0][1] == ' ');
+			case "0,2":
+				return (board[0][2] == ' ');
+			case "1,0":
+				return (board[1][0] == ' ');
+			case "1,1":
+				return (board[1][1] == ' ');
+			case "1,2":
+				return (board[1][2] == ' ');
+			case "2,0":
+				return (board[2][0] == ' ');
+			case "2,1":
+				return (board[2][1] == ' ');
+			case "2,2":
+				return (board[2][2] == ' ');
+			default:
+				return false;
+		}
+	}
 
 
 	
