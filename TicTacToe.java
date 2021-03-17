@@ -136,7 +136,42 @@ private static void playerTurn(char[][] board, Scanner scanner) {
 		}
 		
 	}
+private static void placeMove(char[][] board, String position, char symbol) {
+		switch(position) {
+			case "0,0":
+				board[0][0] = symbol;
+				break;
+			case "0,1":
+				board[0][1] = symbol;
+				break;
+			case "0,2":
+				board[0][2] = symbol;
+				break;
+			case "1,0":
+				board[1][0] = symbol;
+				break;
+			case "1,1":
+				board[1][1] = symbol;
+				break;
+			case "1,2":
+				board[1][2] = symbol;
+				break;
+			case "2,0":
+				board[2][0] = symbol;
+				break;
+			case "2,1":
+				board[2][1] = symbol;
+				break;
+			case "2,2":
+				board[2][2] = symbol;
+				break;
+			default:
+				System.out.println(":(");
+		}
+	}
 
+	
+	
 
 
 	
