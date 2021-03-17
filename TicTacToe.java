@@ -106,6 +106,37 @@ private static boolean isValidMove (char[][] board, String position) {
 				return false;
 		}
 	}
+private static void playerTurn(char[][] board, Scanner scanner) {
+		String userInput;
+        boolean b = true;
+		while (b) {
+			System.out.println("\n\n\nType\n1. 'quit' to quit\n2. 'move x,y' to place your move on position x,y\n");
+			userInput = scanner.nextLine();
+            String[] input = userInput.split(" ",0);
+			switch(input[0])
+            {
+                case "quit":
+                    System.out.println("You have chosen to Quit...\nComputer wins");
+                    System.exit(0);
+                    break;
+                case "move":
+                    if (isValidMove(board, input[1]))
+                    {
+                        placeMove(board, input[1], 'X');
+                        b = false;
+                    } 
+                    else 
+                    {
+                        System.out.println(userInput + " " + "Invalid move, place already taken.");
+                    }
+                    break;
+                default:
+                    System.out.println(userInput + " Invalid command.");
+            }
+		}
+		
+	}
+
 
 
 	
